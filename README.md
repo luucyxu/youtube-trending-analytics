@@ -55,13 +55,11 @@ Color-coded view of activity intensity over time
 
 Screenshot previews are available in the /images folder.
 
-## 🛠️ Reproduce this Project
+📈 Key Insights
+- Identified significant variation in trending volume across countries and months
+- Observed seasonal clustering of trending activity
+- Enabled cross-country comparison through standardized aggregation
 
-1. Clone the repo
-2. Set up Snowflake credentials (via `.env` or `profiles.yml`)
-3. Run `python api_to_snowflake.py` to extract + load
-4. Run `dbt run` from `youtube_dbt_project/`
-5. Open Tableau dashboard with `YouTube Trend.twbx`
 
 📝 Project Folder Structure
 ```plaintext
