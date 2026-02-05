@@ -1,0 +1,38 @@
+# models/marts/schema.yml
+
+version: 2
+
+models:
+  - name: fact_weather
+    description: "Hourly weather facts with calculated feels-like temperature"
+    columns:
+      - name: datetime
+        description: "Timestamp of weather reading"
+        tests:
+          - not_null
+          - unique
+
+      - name: feels_like
+        description: "Calculated feels-like temperature (temp - 0.7 * wind)"
+        tests:
+          - not_null
+
+  - name: fact_weather_daily
+    description: "Daily aggregated weather metrics"
+    columns:
+      - name: date
+        description: "Date of readings"
+        tests:
+          - not_null
+          - unique
+
+      - name: avg_temperature
+        description: "Average daily temperature"
+        tests:
+          - not_null
+
+      - name: hourly_records
+        description: "Number of hourly records aggregated"
+        tests:
+          - accepted_values:
+              values: [24]  # Should be 24 hours per day

@@ -1,0 +1,24 @@
+# models/staging/schema.yml
+
+version: 2
+
+models:
+  - name: stg_weather
+    description: "Staged weather data with cleaned timestamps and city info"
+    columns:
+      - name: datetime
+        description: "Timestamp of weather reading"
+        tests:
+          - not_null
+          - unique
+
+      - name: temperature_2m
+        description: "Temperature at 2 meters in Celsius"
+        tests:
+          - not_null
+
+      - name: city
+        description: "City name"
+        tests:
+          - accepted_values:
+              values: ['Chicago', 'Evanston', 'Aurora']

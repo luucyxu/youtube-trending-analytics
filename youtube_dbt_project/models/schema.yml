@@ -1,0 +1,12 @@
+version: 2
+
+models:
+  - name: stg_youtube_videos
+    columns:
+      - name: video_id
+        tests:
+          - not_null
+      - name: trending_date
+        tests:
+          - not_null
+
