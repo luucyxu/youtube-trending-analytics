@@ -4,7 +4,6 @@
 
 This project builds an end-to-end data pipeline for analyzing YouTube trending video patterns across countries and time. Leveraging a combination of modern data warehousing tools, the pipeline extracts raw data from an API source, stages and transforms it in Snowflake using dbt, and visualizes key insights with Tableau.
 
-
 Kaggle：https://www.kaggle.com/datasets/datasnaek/youtube-new?resource=download
 
 ## 🧰 Tools & Technologies
