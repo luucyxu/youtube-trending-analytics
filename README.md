@@ -1,4 +1,4 @@
-# MLDS 430 | Fall 2025 | YouTube Trending Analytics Dashboard
+# YouTube Trending Analytics Dashboard
 
 ## 🎯 Project Overview
 
